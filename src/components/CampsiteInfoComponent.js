@@ -17,30 +17,6 @@ class CampsiteInfo extends Component {
         );
     }
 
-    // renderComments(comments) {
-    //     if(comments) {
-    //         return (
-    //             <div className = "col-md-5 m-1">
-    //                 <h4>Comments</h4>
-    //                 {
-    //                     comments.map((cmts) => 
-    //                     {
-    //                         return (
-    //                         <div key={cmts.id}>
-
-    //                         </div>
-    //                     }
-    //                     )
-    //                 }
-    //             </div>
-    //         );
-    //     }
-
-    //     else {
-
-    //         <div />
-    //     }
-    // }
 
     renderComments(comments) {
         if (comments) {
@@ -69,16 +45,18 @@ class CampsiteInfo extends Component {
         return <div></div>;
       }
 
-    render () {
-        if(this.props.campsite) {
-            return <div className="row">
-                {this.renderCampsite(this.props.campsite)}
-                {this.renderComments(this.props.campsite.comments)}
-            </div>
+    render() {
+        if (this.props.campsite) {
+            return (
+                <div className="container">
+                    <div className="row">
+                        {this.renderCampsite(this.props.campsite)}
+                        {this.renderComments(this.props.campsite.comments)}
+                    </div>
+                </div>
+            );
         }
-        else {
-            return <div />
-        }  
+        return <div />;
     }
 }
 
