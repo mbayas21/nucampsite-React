@@ -155,7 +155,6 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </Row>
-
                             <Row className="form-group">
                                 <Label htmlFor="email" md={2}>Email</Label>
                                 <Col md={10}>
